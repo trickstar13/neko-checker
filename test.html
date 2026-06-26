@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <title>NEKO Checker テストページ</title>
+
+  <!-- OG tags with intentional issues for testing -->
+  <meta property="og:title" content="テストページ">
+  <meta property="og:description" content=""><!-- 空の description -->
+  <meta property="og:image" content="https://example.com/nonexistent-image.jpg"><!-- 存在しない画像 -->
+  <!-- og:url is missing entirely -->
+
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f5f5f5;
+      color: #333;
+    }
+    h1 { font-size: 1.5em; }
+    .section {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 16px;
+      margin: 16px 0;
+    }
+    .section h2 {
+      font-size: 1em;
+      margin-bottom: 8px;
+    }
+    code {
+      background: #eee;
+      padding: 2px 6px;
+      border-radius: 2px;
+      font-size: 0.9em;
+    }
+    .status {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 2px;
+      font-size: 0.85em;
+      font-weight: bold;
+    }
+    .status--warn { background: #fef3c7; color: #92400e; }
+    .status--err  { background: #fee2e2; color: #991b1b; }
+    .status--ok   { background: #d1fae5; color: #065f46; }
+  </style>
+</head>
+<body>
+
+  <h1>🐱 NEKO Checker テストページ</h1>
+  <p>このページは NEKO Checker 拡張機能のテスト用です。<br>
+     以下の問題が意図的に設定されています。</p>
+
+  <div class="section">
+    <h2>OG タグの問題</h2>
+    <ul>
+      <li><code>og:description</code> — content が空 <span class="status status--warn">検出されるはず</span></li>
+      <li><code>og:image</code> — 存在しない URL <span class="status status--err">検出されるはず</span></li>
+      <li><code>og:url</code> — タグ自体がない <span class="status status--warn">検出されるはず</span></li>
+      <li><code>og:title</code> — 正常 <span class="status status--ok">問題なし</span></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Console 出力</h2>
+    <p>ページ読み込み時に以下が実行されます。</p>
+    <ul>
+      <li><code>console.log()</code> ×2 <span class="status status--warn">検出されるはず</span></li>
+      <li><code>console.warn()</code> ×1 <span class="status status--warn">検出されるはず</span></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>エラー</h2>
+    <ul>
+      <li><code>console.error()</code> ×1 <span class="status status--err">検出されるはず</span></li>
+      <li>未キャッチ TypeError ×1 <span class="status status--err">検出されるはず</span></li>
+    </ul>
+  </div>
+
+  <p style="margin-top: 24px; color: #888; font-size: 0.9em;">
+    ツールバーの猫アイコンを確認してください。<br>
+    3種類の問題があるため、怒り顔の猫（neko-multi）が表示されるはずです。
+  </p>
+
+  <script>
+    // ---- Console logs (should be detected) ----
+    console.log("これはテスト用の console.log です");
+    console.log("デバッグ情報:", { page: "test", version: 1 });
+    console.warn("これはテスト用の console.warn です");
+
+    // ---- Console error (should be detected) ----
+    console.error("これはテスト用の console.error です");
+
+    // ---- Uncaught error (should be detected) ----
+    setTimeout(function () {
+      // This will throw a TypeError
+      const obj = null;
+      obj.nonexistentMethod();
+    }, 1000);
+  </script>
+
+</body>
+</html>

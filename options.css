@@ -1,0 +1,118 @@
+:root {
+  --bg:       #1a1a2e;
+  --surface:  #16213e;
+  --text:     #e0e0e0;
+  --text-dim: #888;
+  --border:   #2a2a4a;
+  --og:       #eab308;
+  --logs:     #9ca3af;
+  --errors:   #ef4444;
+  --ok:       #6ec846;
+  --accent:   #60a5fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 340px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', 'SF Mono', 'Menlo', monospace;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+.header-icon { font-size: 20px; }
+
+.header h1 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.group {
+  border-bottom: 1px solid var(--border);
+  padding: 0 0 4px;
+}
+
+.group-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--surface);
+}
+
+.group-title--og::before,
+.group-title--logs::before,
+.group-title--errors::before,
+.group-title--network::before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  flex-shrink: 0;
+}
+
+.group-title--og::before      { background: var(--og); }
+.group-title--logs::before    { background: var(--logs); }
+.group-title--errors::before  { background: var(--errors); }
+.group-title--network::before { background: var(--errors); }
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 14px 5px 22px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.check:hover {
+  background: var(--surface);
+}
+
+.check input[type="checkbox"] {
+  accent-color: var(--accent);
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.check code {
+  background: var(--surface);
+  padding: 1px 4px;
+  border-radius: 2px;
+  font-size: 11px;
+}
+
+.saved {
+  text-align: center;
+  padding: 8px 14px;
+  font-size: 11px;
+  color: var(--ok);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.saved.show {
+  opacity: 1;
+}

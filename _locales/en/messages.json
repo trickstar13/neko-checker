@@ -1,0 +1,176 @@
+{
+  "extName": {
+    "message": "NEKO Checker"
+  },
+  "extDescription": {
+    "message": "A black cat icon that visualizes page issues at a glance: console logs, errors, OG tag problems, and network failures."
+  },
+  "tooltipNoIssues": {
+    "message": "NEKO Checker — No issues 🐈‍⬛"
+  },
+  "tooltipPrefix": {
+    "message": "NEKO Checker — "
+  },
+  "tooltipOg": {
+    "message": "OG: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tooltipLogs": {
+    "message": "Logs: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tooltipErrors": {
+    "message": "Errors: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tooltipNetwork": {
+    "message": "Network: $COUNT$",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "statusOk": {
+    "message": "No issues found"
+  },
+  "sectionOg": {
+    "message": "OG Tags"
+  },
+  "sectionLogs": {
+    "message": "Console Logs"
+  },
+  "sectionErrors": {
+    "message": "Errors"
+  },
+  "sectionNetwork": {
+    "message": "Network"
+  },
+  "settingsTitle": {
+    "message": "NEKO Checker Settings"
+  },
+  "settingsBtn": {
+    "message": "⚙ Settings"
+  },
+  "settingsSaved": {
+    "message": "Saved"
+  },
+  "groupOg": {
+    "message": "OG Tags"
+  },
+  "groupLogs": {
+    "message": "Console Logs"
+  },
+  "groupErrors": {
+    "message": "Errors"
+  },
+  "groupNetwork": {
+    "message": "Network"
+  },
+  "optOgTitle": {
+    "message": "og:title presence & empty check"
+  },
+  "optOgDescription": {
+    "message": "og:description presence & empty check"
+  },
+  "optOgImage": {
+    "message": "og:image presence & empty check"
+  },
+  "optOgImageBroken": {
+    "message": "og:image broken link check"
+  },
+  "optOgUrl": {
+    "message": "og:url presence check"
+  },
+  "optConsoleLogs": {
+    "message": "console.log"
+  },
+  "optConsoleInfo": {
+    "message": "console.info"
+  },
+  "optConsoleDebug": {
+    "message": "console.debug"
+  },
+  "optConsoleWarn": {
+    "message": "console.warn"
+  },
+  "optConsoleError": {
+    "message": "console.error"
+  },
+  "optUncaughtErrors": {
+    "message": "Uncaught exceptions (window.onerror)"
+  },
+  "optUnhandledRejections": {
+    "message": "Unhandled Promise rejections"
+  },
+  "optNetworkHttp4xx": {
+    "message": "HTTP 4xx (404 Not Found, etc.)"
+  },
+  "optNetworkHttp5xx": {
+    "message": "HTTP 5xx (500 Internal Server Error, etc.)"
+  },
+  "optNetworkConnection": {
+    "message": "Connection errors (DNS failure, refused, etc.)"
+  },
+  "optNetworkErrCacheMiss": {
+    "message": "net::ERR_CACHE_MISS"
+  },
+  "optNetworkErrAborted": {
+    "message": "net::ERR_ABORTED"
+  },
+  "optNetworkErrBlockedByClient": {
+    "message": "net::ERR_BLOCKED_BY_CLIENT (ad blockers, etc.)"
+  },
+  "optNetworkErrBlockedByResponse": {
+    "message": "net::ERR_BLOCKED_BY_RESPONSE (CORS/COEP)"
+  },
+  "ogMissing": {
+    "message": "$TAG$ tag is missing",
+    "placeholders": { "tag": { "content": "$1" } }
+  },
+  "ogEmpty": {
+    "message": "$TAG$ content is empty",
+    "placeholders": { "tag": { "content": "$1" } }
+  },
+  "ogImageInvalid": {
+    "message": "og:image URL is invalid"
+  },
+  "ogImageBroken": {
+    "message": "og:image is broken (cannot be loaded)"
+  },
+  "welcomeTitle": {
+    "message": "Welcome to NEKO Checker!"
+  },
+  "welcomeThanks": {
+    "message": "Thanks for installing.\nThe black cat watches over your pages from the toolbar."
+  },
+  "welcomePinTitle": {
+    "message": "Pin it to your toolbar"
+  },
+  "welcomeStep1": {
+    "message": "Click the Extensions icon (puzzle piece 🧩) in the top-right corner"
+  },
+  "welcomeStep2": {
+    "message": "Click the pin icon 📌 next to NEKO Checker"
+  },
+  "welcomeStep3": {
+    "message": "The black cat now lives in your toolbar 🐈‍⬛"
+  },
+  "welcomeExpTitle": {
+    "message": "What the cat's expression means"
+  },
+  "welcomeExpBase": {
+    "message": "No issues"
+  },
+  "welcomeExpOg": {
+    "message": "OG tag issues"
+  },
+  "welcomeExpLogs": {
+    "message": "Console logs detected"
+  },
+  "welcomeExpErrors": {
+    "message": "Errors detected"
+  },
+  "welcomeExpMulti": {
+    "message": "Multiple issue types"
+  },
+  "welcomeReady": {
+    "message": "Once pinned, the cat checks every page you visit."
+  }
+}

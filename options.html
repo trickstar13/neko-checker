@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <header class="header">
+    <span class="header-icon">🐈‍⬛</span>
+    <h1 data-i18n="settingsTitle"></h1>
+  </header>
+
+  <section class="group">
+    <h2 class="group-title group-title--og" data-i18n="groupOg"></h2>
+    <label class="check"><input type="checkbox" data-key="ogTitle"><span data-i18n="optOgTitle"></span></label>
+    <label class="check"><input type="checkbox" data-key="ogDescription"><span data-i18n="optOgDescription"></span></label>
+    <label class="check"><input type="checkbox" data-key="ogImage"><span data-i18n="optOgImage"></span></label>
+    <label class="check"><input type="checkbox" data-key="ogImageBroken"><span data-i18n="optOgImageBroken"></span></label>
+    <label class="check"><input type="checkbox" data-key="ogUrl"><span data-i18n="optOgUrl"></span></label>
+  </section>
+
+  <section class="group">
+    <h2 class="group-title group-title--logs" data-i18n="groupLogs"></h2>
+    <label class="check"><input type="checkbox" data-key="consoleLogs"><span data-i18n="optConsoleLogs"></span></label>
+    <label class="check"><input type="checkbox" data-key="consoleInfo"><span data-i18n="optConsoleInfo"></span></label>
+    <label class="check"><input type="checkbox" data-key="consoleDebug"><span data-i18n="optConsoleDebug"></span></label>
+    <label class="check"><input type="checkbox" data-key="consoleWarn"><span data-i18n="optConsoleWarn"></span></label>
+  </section>
+
+  <section class="group">
+    <h2 class="group-title group-title--errors" data-i18n="groupErrors"></h2>
+    <label class="check"><input type="checkbox" data-key="consoleError"><span data-i18n="optConsoleError"></span></label>
+    <label class="check"><input type="checkbox" data-key="uncaughtErrors"><span data-i18n="optUncaughtErrors"></span></label>
+    <label class="check"><input type="checkbox" data-key="unhandledRejections"><span data-i18n="optUnhandledRejections"></span></label>
+  </section>
+
+  <section class="group">
+    <h2 class="group-title group-title--network" data-i18n="groupNetwork"></h2>
+    <label class="check"><input type="checkbox" data-key="networkHttp4xx"><span data-i18n="optNetworkHttp4xx"></span></label>
+    <label class="check"><input type="checkbox" data-key="networkHttp5xx"><span data-i18n="optNetworkHttp5xx"></span></label>
+    <label class="check"><input type="checkbox" data-key="networkConnection"><span data-i18n="optNetworkConnection"></span></label>
+    <label class="check"><input type="checkbox" data-key="networkErrCacheMiss"><span data-i18n="optNetworkErrCacheMiss"></span></label>
+    <label class="check"><input type="checkbox" data-key="networkErrAborted"><span data-i18n="optNetworkErrAborted"></span></label>
+    <label class="check"><input type="checkbox" data-key="networkErrBlockedByClient"><span data-i18n="optNetworkErrBlockedByClient"></span></label>
+    <label class="check"><input type="checkbox" data-key="networkErrBlockedByResponse"><span data-i18n="optNetworkErrBlockedByResponse"></span></label>
+  </section>
+
+  <div class="saved" id="saved" data-i18n="settingsSaved"></div>
+
+  <script src="options.js"></script>
+</body>
+</html>

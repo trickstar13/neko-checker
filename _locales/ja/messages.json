@@ -1,0 +1,176 @@
+{
+  "extName": {
+    "message": "NEKO Checker"
+  },
+  "extDescription": {
+    "message": "黒猫がページの問題を教えてくれるウェブ制作者向けチェッカー。console.logの残存や、エラー、OGタグの問題を検出します。"
+  },
+  "tooltipNoIssues": {
+    "message": "NEKO Checker — 問題なし 🐈‍⬛"
+  },
+  "tooltipPrefix": {
+    "message": "NEKO Checker — "
+  },
+  "tooltipOg": {
+    "message": "OG問題: $COUNT$件",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tooltipLogs": {
+    "message": "ログ: $COUNT$件",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tooltipErrors": {
+    "message": "エラー: $COUNT$件",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "tooltipNetwork": {
+    "message": "通信エラー: $COUNT$件",
+    "placeholders": { "count": { "content": "$1" } }
+  },
+  "statusOk": {
+    "message": "問題は見つかりませんでした"
+  },
+  "sectionOg": {
+    "message": "OG タグ"
+  },
+  "sectionLogs": {
+    "message": "Console ログ"
+  },
+  "sectionErrors": {
+    "message": "エラー"
+  },
+  "sectionNetwork": {
+    "message": "ネットワーク"
+  },
+  "settingsTitle": {
+    "message": "NEKO Checker 設定"
+  },
+  "settingsBtn": {
+    "message": "⚙ 設定"
+  },
+  "settingsSaved": {
+    "message": "保存しました"
+  },
+  "groupOg": {
+    "message": "OG タグ"
+  },
+  "groupLogs": {
+    "message": "Console ログ"
+  },
+  "groupErrors": {
+    "message": "エラー"
+  },
+  "groupNetwork": {
+    "message": "ネットワーク"
+  },
+  "optOgTitle": {
+    "message": "og:title の有無・空チェック"
+  },
+  "optOgDescription": {
+    "message": "og:description の有無・空チェック"
+  },
+  "optOgImage": {
+    "message": "og:image の有無・空チェック"
+  },
+  "optOgImageBroken": {
+    "message": "og:image のリンク切れ確認"
+  },
+  "optOgUrl": {
+    "message": "og:url の有無チェック"
+  },
+  "optConsoleLogs": {
+    "message": "console.log"
+  },
+  "optConsoleInfo": {
+    "message": "console.info"
+  },
+  "optConsoleDebug": {
+    "message": "console.debug"
+  },
+  "optConsoleWarn": {
+    "message": "console.warn"
+  },
+  "optConsoleError": {
+    "message": "console.error"
+  },
+  "optUncaughtErrors": {
+    "message": "未キャッチの例外 (window.onerror)"
+  },
+  "optUnhandledRejections": {
+    "message": "未処理の Promise rejection"
+  },
+  "optNetworkHttp4xx": {
+    "message": "HTTP 4xx（404 Not Found 等）"
+  },
+  "optNetworkHttp5xx": {
+    "message": "HTTP 5xx（500 Internal Server Error 等）"
+  },
+  "optNetworkConnection": {
+    "message": "接続エラー（DNS 解決失敗、接続拒否等）"
+  },
+  "optNetworkErrCacheMiss": {
+    "message": "net::ERR_CACHE_MISS"
+  },
+  "optNetworkErrAborted": {
+    "message": "net::ERR_ABORTED"
+  },
+  "optNetworkErrBlockedByClient": {
+    "message": "net::ERR_BLOCKED_BY_CLIENT（広告ブロッカー等）"
+  },
+  "optNetworkErrBlockedByResponse": {
+    "message": "net::ERR_BLOCKED_BY_RESPONSE（CORS/COEP）"
+  },
+  "ogMissing": {
+    "message": "$TAG$ タグが存在しません",
+    "placeholders": { "tag": { "content": "$1" } }
+  },
+  "ogEmpty": {
+    "message": "$TAG$ の content が空です",
+    "placeholders": { "tag": { "content": "$1" } }
+  },
+  "ogImageInvalid": {
+    "message": "og:image の URL が不正です"
+  },
+  "ogImageBroken": {
+    "message": "og:image がリンク切れです（読み込めません）"
+  },
+  "welcomeTitle": {
+    "message": "NEKO Checker へようこそ！"
+  },
+  "welcomeThanks": {
+    "message": "インストールありがとうございます。\n黒猫がツールバーからページの問題を常に見張ります。"
+  },
+  "welcomePinTitle": {
+    "message": "ツールバーにピン留めしてください"
+  },
+  "welcomeStep1": {
+    "message": "ツールバー右上の拡張機能アイコン（パズルピース 🧩）をクリック"
+  },
+  "welcomeStep2": {
+    "message": "NEKO Checker の横にあるピンアイコン 📌 をクリック"
+  },
+  "welcomeStep3": {
+    "message": "ツールバーに黒猫が常駐します 🐈‍⬛"
+  },
+  "welcomeExpTitle": {
+    "message": "猫の表情の意味"
+  },
+  "welcomeExpBase": {
+    "message": "問題なし"
+  },
+  "welcomeExpOg": {
+    "message": "OGタグに問題あり"
+  },
+  "welcomeExpLogs": {
+    "message": "コンソールログあり"
+  },
+  "welcomeExpErrors": {
+    "message": "エラーあり"
+  },
+  "welcomeExpMulti": {
+    "message": "複数の問題あり"
+  },
+  "welcomeReady": {
+    "message": "ピン留めしたら、どのページを開いても猫がチェックしてくれます。"
+  }
+}

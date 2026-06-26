@@ -1,0 +1,207 @@
+/* ===== NEKO Checker — Popup Styles ===== */
+
+:root {
+  --bg:       #1a1a2e;
+  --surface:  #16213e;
+  --text:     #e0e0e0;
+  --text-dim: #888;
+  --border:   #2a2a4a;
+  --og:       #eab308;
+  --logs:     #9ca3af;
+  --errors:   #ef4444;
+  --ok:       #6ec846;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 340px;
+  max-height: 480px;
+  overflow-y: auto;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', 'SF Mono', 'Menlo', monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  image-rendering: pixelated;
+}
+
+/* ---- Header ---- */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+.header-icon {
+  font-size: 20px;
+}
+
+.header h1 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* ---- Status OK ---- */
+
+.status-ok {
+  padding: 24px 14px;
+  text-align: center;
+  color: var(--ok);
+  font-size: 13px;
+}
+
+/* ---- Sections ---- */
+
+.section {
+  border-bottom: 1px solid var(--border);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--surface);
+}
+
+.count {
+  margin-left: auto;
+  font-weight: 400;
+  color: var(--text-dim);
+}
+
+/* ---- Indicator dots ---- */
+
+.dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 0;       /* square pixel-art dots */
+  flex-shrink: 0;
+}
+
+.dot--og    { background: var(--og); }
+.dot--logs  { background: var(--logs); }
+.dot--errors  { background: var(--errors); }
+.dot--network { background: var(--errors); }
+
+/* ---- Lists ---- */
+
+.list {
+  list-style: none;
+  max-height: 140px;
+  overflow-y: auto;
+}
+
+.list li {
+  padding: 4px 14px 4px 28px;
+  border-top: 1px solid var(--border);
+  word-break: break-all;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.list li:first-child {
+  border-top: none;
+}
+
+/* Level badges */
+.list li::before {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 0 3px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  vertical-align: middle;
+}
+
+.list li[data-level="log"]::before      { content: "LOG";   color: var(--logs); }
+.list li[data-level="info"]::before     { content: "INFO";  color: #60a5fa; }
+.list li[data-level="debug"]::before    { content: "DBG";   color: #a78bfa; }
+.list li[data-level="warn"]::before     { content: "WARN";  color: var(--og); }
+.list li[data-level="error"]::before    { content: "ERR";   color: var(--errors); }
+.list li[data-level="uncaught"]::before { content: "ERR";   color: var(--errors); }
+.list li[data-level="unhandledrejection"]::before {
+  content: "REJECT";
+  color: var(--errors);
+}
+
+/* OG issue items */
+.list li[data-tag]::before {
+  content: attr(data-tag);
+  color: var(--og);
+}
+
+/* Network error items */
+.list li[data-status]::before {
+  content: attr(data-status);
+  color: var(--errors);
+}
+
+/* ---- Footer ---- */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.settings-btn {
+  display: inline-block;
+  padding: 4px 12px;
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 11px;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.settings-btn:hover {
+  color: var(--text);
+  border-color: var(--text-dim);
+}
+
+.footer kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  font-family: inherit;
+  font-size: 10px;
+  color: var(--text);
+  background: var(--surface);
+}
+
+/* ---- Scrollbar ---- */
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+}

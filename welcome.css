@@ -1,0 +1,150 @@
+:root {
+  --bg:       #1a1a2e;
+  --surface:  #16213e;
+  --text:     #e0e0e0;
+  --text-dim: #888;
+  --border:   #2a2a4a;
+  --og:       #eab308;
+  --logs:     #9ca3af;
+  --errors:   #ef4444;
+  --multi:    #ef4444;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Courier New', 'SF Mono', 'Menlo', monospace;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.hero-icon {
+  font-size: 48px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 8px;
+}
+
+.hero-sub {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.steps {
+  list-style: none;
+  counter-reset: step;
+}
+
+.steps li {
+  counter-increment: step;
+  padding: 8px 0;
+  padding-left: 32px;
+  position: relative;
+  font-size: 13px;
+  border-top: 1px solid var(--border);
+}
+
+.steps li:first-child {
+  border-top: none;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--bg);
+  background: var(--text-dim);
+  border-radius: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.expressions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.exp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-dim);
+  min-width: 140px;
+}
+
+.exp img {
+  image-rendering: pixelated;
+  flex-shrink: 0;
+}
+
+.exp-icon-wrap {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.exp-icon-wrap img {
+  display: block;
+}
+
+.exp-icon--og    { background: var(--og); }
+.exp-icon--logs  { background: var(--logs); }
+.exp-icon--errors { background: var(--errors); }
+.exp-icon--multi  { background: var(--multi); }
+
+.ready {
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 13px;
+  margin-top: 8px;
+}
