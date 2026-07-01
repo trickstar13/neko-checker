@@ -29,7 +29,7 @@ A Chrome extension that instantly visualizes easy-to-miss issues in web developm
 | OG tag issues | Looking upper-left | Yellow |
 | Logs present | Looking up | Gray |
 | Errors found | Looking upper-right | Red |
-| Multiple issues | Angry face | Most severe color |
+| Multiple issues | Airplane ears | Most severe color |
 
 ## Installation
 

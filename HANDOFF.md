@@ -220,7 +220,7 @@ neko-checker/
 | `neko-og.png` | OG異常のみ | 左上を見る、左耳伏せ |
 | `neko-logs.png` | ログのみ | 上を見る |
 | `neko-errors.png` | エラーのみ | 右上を見る、右耳伏せ |
-| `neko-multi.png` | 2つ以上の問題 | 怒り目、両耳伏せ |
+| `neko-multi.png` | 2つ以上の問題 | イカ耳 |
 
 すべて 32×32 背景透過 PNG。`icons/` フォルダに配置済み。
 
